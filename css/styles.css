@@ -73,6 +73,23 @@ li{
     padding: 1.6rem 0;
 }
 
+.nav.fix-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #243a6f;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.nav.fix-nav .nav-link,
+.nav.fix-nav .logo,
+.nav.fix-nav .cart-icon,
+.nav.fix-nav .menu-icon{
+    color: #fff;
+}
+
 .navigation{
     display: flex;
     flex-direction: row;
@@ -176,11 +193,11 @@ li{
         padding: 1rem 0;    
     }
 
-    .nav.fixed-nav .nav-link{
+    .nav.fix-nav .nav-link{
         color: #243a6f;
     }
 
-    .nav-link .icon{
+    .nav-link.icon{
         display: none;
     }
 
@@ -641,4 +658,106 @@ li{
     .brands-center{
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+.footer{
+    background-color: #222;
+    padding: 6rem 1rem;
+    line-height: 3rem;
+}
+
+.footer-center{
+    margin-right: 1rem;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    color: #fff;
+}
+
+.footer-center a:link,
+.footer-center a:visited{
+    display: block;
+    color: #f1f1f1;
+    font-size: 1.4rem;
+    transition: 0.6s;
+}
+
+.footer-center a:hover{
+    color: #f60091;
+}
+
+.footer-center div{
+    color: #f1f1f1;
+    font-size: 1.4rem;
+}
+
+.footer-center h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 996px){
+    .footer-container{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+.section .top{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 4rem;
+}
+
+.all-products .top select{
+    font-family: "Poppins", sans-serif;
+    width: 20rem;
+    padding: 1rem;
+    border: 2px solid #ccc;
+    appearance: none;
+    outline: none;
+}
+
+form{
+    position: relative;
+    z-index: 1;
+}
+
+form span{
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    z-index: 0;
+}
+
+.pagination{
+    padding: 3rem 0 5rem 0;
+}
+
+.pagination span{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border: 1px solid #243a6f;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.pagination span:hover{
+    border: 1px solid #243a6f;
+    background-color: #243a6f;
+    color: #fff;
 }
